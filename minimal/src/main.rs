@@ -32,8 +32,6 @@ async fn exex<Node: FullNodeComponents>(mut ctx: ExExContext<Node>) -> eyre::Res
             }
         };
 
-        info!("Received notification: {:?}", notification);
-
         if let Some(committed_chain) = notification.committed_chain() {
             ctx.events.send(ExExEvent::FinishedHeight(committed_chain.tip().number))?;
         }
