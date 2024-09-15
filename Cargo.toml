@@ -9,7 +9,6 @@ members = [
   "rollup",
 ]
 resolver = "2"
-default-members = ["minimal"]
 
 [workspace.package]
 version = "0.1.0"
